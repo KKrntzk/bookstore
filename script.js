@@ -6,6 +6,7 @@ let ourArray = [];
 
 // function render all
 function renderAll() {
+  renderLayout();
   renderTitle();
   renderImg();
   renderBookSpecs();
@@ -20,6 +21,56 @@ for (let i = 0; i < objKeys.length; i++) {
 
 // const myObj = Object.keys(books);
 
+//function render Layout
+
+function renderLayout() {
+  let mainLayoutRef = document.getElementById("main-container");
+  mainLayoutRef.innerHTML = `<section class="book-section-container" id="firstBookSection">
+        <header class="header-single-book" id="singleBookHeader">
+          <div id="bookTitle">           
+          </div>
+
+        </header>
+        <div class="seperator"></div>
+        <section id="bookImg">    
+        </section>
+        <div class="seperator"></div>
+        <section id="bookSpecs">
+          <header class="header-book-specs" id="bookSpecsHeader">          
+          </header>
+
+          <table id="tableSpecs">     
+          </table>
+        </section>
+        <div class="seperator"></div>
+        <section class="comment-section-container" id="commentsSection">
+          <header class="header-comments" id="commentsHeader">
+            <p>Kommentare</p>
+          </header>
+
+          <div class="comment-table-container" id="commentsTable">
+            <table>
+              <tr>
+                <td id="tdCommentUserName">                 
+                </td>
+                <td id="tdUserComment">                
+                </td>
+              </tr>
+            </table>
+            <div class="input-container">
+              <input class="input-comment" id="commentInput" type="text" />
+              <button class="submit-send-btn" id="submitCommitBtn">
+                <img
+                  class="submit-send-btn-img"
+                  src="./img/send.png"
+                  alt="icon of send symbol"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>`;
+}
 // function render title template
 function renderTitle() {
   let titleRef = document.getElementById("bookTitle");
