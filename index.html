@@ -8,20 +8,23 @@
     <script src="./script.js"></script>
   </head>
   <body>
-    <header>
-      <img src="" alt="Logo of the Website" />
+    <header class="main-header">
+      <img class="logo-img" src="./img/ai-generated-8906995_640.png" alt="Logo of the Website" />
     </header>
     <main>
-      <section id="singleBookSection">
-        <header id="singleBookHeader">
-          <p id="bookTitle"></p>
+      <section class="book-section-container" id="singleBookSection">
+        <header class="header-single-book" id="singleBookHeader">
+          <p id="bookTitle">Red Rising</p>
         </header>
+        <section id="bookImg">
+            <img class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">
+        </section>
         <section id="bookSpecs">
-          <header id="bookSpecsHeader">
-            <p id="bookPrice"></p>
-            <div id="favouriteSubSection">
-              <p id="favCounter">Likes</p>
-              <button id="favBtn"></button>
+          <header class="header-book-specs" id="bookSpecsHeader">
+            <p id="bookPrice">19,99</p>
+            <div class="favourite-sub-container" id="favouriteSubSection">
+              <p id="favCounter">${}Likes</p>
+              <button  id="favBtn"><img class="fav-heart-btn" src="./img/heart-2034908_1280.png" alt=""></button>
           </header>
                  <table id="tableSpecs">
                     <tr>
@@ -58,7 +61,7 @@
       </section>
     </main>
     <footer>
-      <img src="" alt="Logo of the Website" />
+      <img class="logo-img" src="./img/ai-generated-8906995_640.png" alt="Logo of the Website" />
     </footer>
   </body>
 </html>
