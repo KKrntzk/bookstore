@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(221, 221, 252);
 }
 
 footer {
@@ -21,6 +22,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(221, 221, 252);
 }
 
 main {
@@ -28,6 +30,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.seperator {
+  background-color: #6d7ece6b;
+  box-shadow: 1px 1px 1px 1px rgba(173, 216, 230, 0.541);
+  width: 400px;
+  height: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .book-section-container {
@@ -42,6 +53,7 @@ main {
 
 .header-single-book {
   height: 24px;
+  width: 400px;
 }
 
 .book-img {
@@ -52,6 +64,7 @@ main {
 
 .header-book-specs {
   height: 24px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
 }
@@ -63,5 +76,57 @@ main {
 }
 
 .fav-heart-btn {
+  cursor: pointer;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(120, 126, 156);
+}
+
+.fav-heart-btn-img {
   height: 20px;
+  filter: grayscale(100%);
+}
+
+.comment-section-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-comments {
+  width: 400px;
+  display: flex;
+  justify-content: start;
+}
+
+.comment-table-container {
+  width: 400px;
+}
+
+.input-container {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-comment {
+  width: 80%;
+}
+
+.submit-send-btn {
+  cursor: pointer;
+  background-color: rgb(120, 126, 156);
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+  object-fit: contain;
+}
+
+.submit-send-btn-img {
+  height: 15px;
+  width: 15px;
+  padding-top: 4px;
 }
