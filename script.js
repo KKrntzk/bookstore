@@ -5,9 +5,9 @@ function renderAll() {
   renderHeaderBookSpecs();
   renderComments();
 }
-// function render title template
-// const myObj = Object.keys(books);
 
+// const myObj = Object.keys(books);
+// function render title template
 function renderTitle() {
   let titleRef = document.getElementById("bookTitle");
   titleRef.innerHTML = `<p>Red Rising</p>`;
@@ -17,19 +17,16 @@ function renderImg() {
   let imgRef = document.getElementById("bookImg");
   imgRef.innerHTML = `<img class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">`;
 }
-
-//function render header sub
+//function render header sub template
 function renderHeaderBookSpecs() {
   let BookSpecsHeaderRef = document.getElementById("bookSpecsHeader");
-  BookSpecsHeaderRef.innerHTML = `   <div id="bookPrice">
+  BookSpecsHeaderRef.innerHTML = `<div id="bookPrice">
             <p>19,99</p>
             </div>
-            <div class="favourite-sub-container" id="favouriteSubSection">
-             
+            <div class="favourite-sub-container" id="favouriteSubSection">             
              <p id="favCounter">
                  <p >Likes</p> 
-            </p> 
-            
+            </p>             
               <button class="fav-heart-btn" id="favBtn"><img class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
             </div>`;
 }
