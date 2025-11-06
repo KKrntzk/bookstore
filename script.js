@@ -2,37 +2,54 @@
 function renderAll() {
   renderTitle();
   renderImg();
-  renderLikes();
-  renderPrice();
+  renderHeaderBookSpecs();
   renderComments();
 }
 // function render title template
-const myObj = Object.keys(books);
+// const myObj = Object.keys(books);
 
 function renderTitle() {
-  let titleRef = document.getElementById("singleBookHeader");
+  let titleRef = document.getElementById("bookTitle");
+  titleRef.innerHTML = `<p>Red Rising</p>`;
 }
 //function render img template
 function renderImg() {
   let imgRef = document.getElementById("bookImg");
   imgRef.innerHTML = `<img class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">`;
 }
-//function render likes template
-function renderLikes() {
-  let likeRef = document.getElementById("favouriteSubSection");
-  likeRef.innerHTML = `  <p id="favCounter">${i}Likes</p>
-              <button class="fav-heart-btn" id="favBtn"><img class="fav-heart-btn-img" src="./img/heart-2034908_1280.png" alt=""></button>`;
-}
-//function price template
-function renderPrice() {
-  let priceRef = document.getElementById("bookPrice");
-  priceRef.innerHTML = `<p>${i}19,99</p>`;
+
+//function render header sub
+function renderHeaderBookSpecs() {
+  let BookSpecsHeaderRef = document.getElementById("bookSpecsHeader");
+  BookSpecsHeaderRef.innerHTML = `   <div id="bookPrice">
+            <p>19,99</p>
+            </div>
+            <div class="favourite-sub-container" id="favouriteSubSection">
+             
+             <p id="favCounter">
+                 <p >Likes</p> 
+            </p> 
+            
+              <button class="fav-heart-btn" id="favBtn"><img class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
+            </div>`;
 }
 //function comments template
 function renderComments() {
-  let commentsUserRef = document.getElementById("tdcommentatorUserName");
-  let commentRef = document.getElementById("tduserComment");
+  let commentsUserRef = document.getElementById("tdCommentUserName");
+  let commentRef = document.getElementById("tdUserComment");
   commentsUserRef.innerHTML = `<td id="commentatorUserName">leser2112</td>`;
   commentRef.innerHTML = `<td id="userComment">das Buch ist supi!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</td>`;
 }
 // function onclick change like amount add class disable greyscale
+function likesUpdate() {
+  const likeRef = document.getElementById("favCounter");
+  likeRef.innerHTML = ` <p id="favCounter">
+                <p >${i + 1}Likes</p>
+            </p>`;
+  disableGreyscale();
+}
+
+function disableGreyscale() {
+  let heartBtnRef = document.getElementById("favBtn");
+  heartBtnRef.classList.remove("heart-btn-greyscale");
+}

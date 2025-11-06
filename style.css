@@ -85,6 +85,9 @@ main {
 
 .fav-heart-btn-img {
   height: 20px;
+}
+
+.heart-btn-greyscale {
   filter: grayscale(100%);
 }
 
