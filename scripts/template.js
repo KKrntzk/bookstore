@@ -192,3 +192,5 @@ let books = [
     ],
   },
 ];
+
+console.table(ourArray);

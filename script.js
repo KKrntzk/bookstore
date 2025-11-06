@@ -1,9 +1,20 @@
+//#region VARIABLEs
+
+let objKeys = Object.keys(books);
+let ourArray = [];
+//#endregion
+
 // function render all
 function renderAll() {
   renderTitle();
   renderImg();
   renderHeaderBookSpecs();
   renderComments();
+}
+
+for (let i = 0; i < objKeys.length; i++) {
+  const element = objKeys[i];
+  ourArray.push(books[objKeys[i]]);
 }
 
 // const myObj = Object.keys(books);
