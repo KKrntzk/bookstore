@@ -4,12 +4,30 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "UnifrakturMaguntia";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/unifrakturmaguntia-v22-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Goudy Bookletter 1911";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/goudy-bookletter-1911-v21-latin-regular.woff2")
+    format("woff2");
+}
+
 .logo-img {
   height: 40px;
   width: 40px;
 }
 
 .main-header {
+  font-family: UnifrakturMaguntia;
   height: 64px;
   display: flex;
   justify-content: center;
@@ -19,6 +37,7 @@
 }
 
 footer {
+  font-family: UnifrakturMaguntia;
   height: 64px;
   display: flex;
   justify-content: center;
@@ -28,6 +47,7 @@ footer {
 }
 
 main {
+  font-family: "Goudy Bookletter 1911";
   height: 100vh;
   display: flex;
   flex-direction: column;
