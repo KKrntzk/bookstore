@@ -23,14 +23,9 @@ function renderLayout(j) {
           <header class="header-comments" id="commentsHeader">
             <p>Kommentare</p>
           </header>
-          <div class="comment-table-container" id="commentsTable(${j})">
-            <table>
-              <tr>
-                <td id="tdCommentUserName(${j})">                 
-                </td>
-                <td id="tdUserComment(${j})">                
-                </td>
-              </tr>
+          <div class="comment-table-container">
+            <table id="commentsTable(${j})">
+             
             </table>
             <div class="input-container">
               <input class="input-comment" id="commentInput(${j})" type="text" />
@@ -86,11 +81,15 @@ function renderHeaderBookSpecs(elementPrice, elementLikesAmount) {
             </div>`;
 }
 //function comments template
-function renderComments() {
-  let commentsUserRef = document.getElementById("tdCommentUserName");
-  let commentRef = document.getElementById("tdUserComment");
-  commentsUserRef.innerHTML = ` <p id="commentatorUserName">leser2112</p>`;
-  commentRef.innerHTML = `<p id="userComment">
-                    das Buch ist supi!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                  </p>`;
+function renderComments(j, i, elementCommentUserName, elementComment) {
+  return `     <tr>
+                <td id="tdCommentUserName(${j})">
+                  <p id="commentatorUserName(${i})">${elementCommentUserName}</p>               
+                </td>
+                <td id="tdUserComment(${j})">
+                  <p id="userComment(${i})">
+                    ${elementComment}
+                  </p>               
+                </td>
+              </tr>`;
 }

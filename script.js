@@ -13,6 +13,7 @@ function renderEachElement() {
     renderEachImg(j);
     renderEachHeaderBooksSpecs(j);
     renderEachBookSpecs(j);
+    // renderEachBooksComments(j);
   }
 }
 
@@ -51,9 +52,21 @@ function renderEachBookSpecs(j) {
 }
 
 function renderEachBooksComments(j) {
-  const commentsRef = document.getElementById(`commentsSection(${j})`);
-  const element = books[j].name;
-  bookTitlesRef.innerHTML += renderTitle(element);
+  const commentsTableRef = document.getElementById(`commentsTable(${j})`);
+  for (let i = 0; i < books[j].comments.length; i++) {
+    const elementCommentUserName = books[j].comments[i].name;
+    const elementComment = books[j].comments[i].comment;
+    commentsTableRef.innerHTML += renderComments(
+      j,
+      i,
+      elementCommentUserName,
+      elementComment
+    );
+  }
+  elementCommentUserName.innerHTML = document.getElementById(
+    `commentatorUserName(${i})`
+  );
+  elementComment.innerHTML = document.getElementById(`userComment(${i})`);
 }
 
 //#endregion
