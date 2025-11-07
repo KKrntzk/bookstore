@@ -1,16 +1,11 @@
 //#region VARIABLEs
 
-let objKeys = Object.keys(books);
-// let objKeysTitles = Object.keys(books.name);
-let ourArray = [];
 //#endregion
 
 // function render all
 function renderAll() {
   renderEachElement();
-  pushObjectToArray();
-  console.log(ourArray);
-  // renderEachTitle();
+  renderEachTitle();
   // renderLayout();
   // renderTitle();
   // renderImg();
@@ -19,23 +14,24 @@ function renderAll() {
   // renderComments();
 }
 
-function pushObjectToArray() {
-  for (let i = 0; i < objKeys.length; i++) {
-    ourArray.push(books[objKeys[i]]);
-  }
-}
-
 function renderEachElement() {
   let mainContainerRef = document.getElementById("mainContainer");
-  for (let j = 0; j < objKeys.length; j++) {
+  for (let j = 0; j < books.length; j++) {
     mainContainerRef.innerHTML += renderLayout(j);
   }
 }
 
 function renderEachTitle() {
-  let titleRef = document.getElementById("bookTitle");
-  for (let j = 0; j < objKeys.length; j++) {
-    titleRef.innerHTML += renderTitle(j);
+  let bookTitlesRef = document.getElementById("bookTitle(${j})");
+  for (let i = 0; i < books.length; i++) {
+    const element = books[i];
+    bookTitlesRef.innerHTML += renderTitle(element.name);
+
+    // for (let k = 0; k < ourArray.length; k++) {
+    //   let titleRef = document.getElementById("bookTitle(0)");
+    //   const element = ourArray[k];
+    //   titleRef.innerHTML += renderTitle(element, k);
+    // }
   }
 }
 

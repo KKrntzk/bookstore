@@ -1,28 +1,28 @@
 //function render Layout
 function renderLayout(j) {
-  return `<section class="book-section-container" id="firstBookSection(${j})">
-        <header class="header-single-book" id="singleBookHeader(${j})">
-          <div id="bookTitle(${j})">           
-          </div>
-
-        </header>
-        <div class="seperator"></div>
-        <section id="bookImg(${j})">    
-        </section>
-        <div class="seperator"></div>
-        <section id="bookSpecs(${j})">
-          <header class="header-book-specs" id="bookSpecsHeader(${j})">          
+  return `
+        <section class="book-section-container" id="firstBookSection(${j})">
+          <header class="header-single-book" id="singleBookHeader(${j})">
+           <div id="bookTitle(${j})"> </div>
           </header>
 
-          <table id="tableSpecs(${j})">     
-          </table>
-        </section>
-        <div class="seperator"></div>
-        <section class="comment-section-container" id="commentsSection(${j})">
+          <div class="seperator"></div>
+
+         <section id="bookImg(${j})"> </section>
+
+          <div class="seperator"></div>
+
+         <section id="bookSpecs(${j})">
+          <header class="header-book-specs" id="bookSpecsHeader(${j})"> </header>
+          <table id="tableSpecs(${j})"> </table>
+         </section>
+
+          <div class="seperator"></div>
+
+         <section class="comment-section-container" id="commentsSection(${j})">
           <header class="header-comments" id="commentsHeader">
             <p>Kommentare</p>
           </header>
-
           <div class="comment-table-container" id="commentsTable(${j})">
             <table>
               <tr>
@@ -34,21 +34,21 @@ function renderLayout(j) {
             </table>
             <div class="input-container">
               <input class="input-comment" id="commentInput(${j})" type="text" />
-              <button class="submit-send-btn" id="submitCommitBtn(${j})">
-                <img
-                  class="submit-send-btn-img"
-                  src="./img/send.png"
-                  alt="icon of send symbol"
-                />
-              </button>
+               <button class="submit-send-btn" id="submitCommitBtn(${j})">
+                 <img
+                   class="submit-send-btn-img"
+                   src="./img/send.png"
+                   alt="icon of send symbol"
+                 />
+               </button>
             </div>
           </div>
         </section>
       </section>`;
 }
 // function render title template
-function renderTitle(j) {
-  return `<p>${books.name(j)}</p>`;
+function renderTitle(element) {
+  return `<p>${element.name}</p>`;
 }
 //function render img template
 function renderImg() {
