@@ -8,6 +8,9 @@ let ourArray = [];
 // function render all
 function renderAll() {
   renderEachElement();
+  pushObjectToArray();
+  console.log(ourArray);
+  renderEachTitle();
   // renderLayout();
   // renderTitle();
   // renderImg();
@@ -16,24 +19,24 @@ function renderAll() {
   // renderComments();
 }
 
-// function getTitles() {
-
-// }
+function pushObjectToArray() {
+  for (let i = 0; i < objKeys.length; i++) {
+    ourArray.push(books[objKeys[i]]);
+  }
+}
 
 function renderEachElement() {
   let mainContainerRef = document.getElementById("mainContainer");
   for (let j = 0; j < objKeys.length; j++) {
     mainContainerRef.innerHTML += renderLayout(j);
   }
-  // for (let i = 0; i < objKeys.length; i++) {
-  //   const books = objKeys[i];
-  //   ourArray.push(books[objKeys[i]]);
-  // }
 }
 
 function renderEachTitle() {
   let titleRef = document.getElementById("bookTitle");
-  titleRef.innerHTML += renderTitle();
+  for (let j = 0; j < objKeys.length; j++) {
+    titleRef.innerHTML += renderTitle(j);
+  }
 }
 
 // const myObj = Object.keys(books);

@@ -47,8 +47,8 @@ function renderLayout(j) {
       </section>`;
 }
 // function render title template
-function renderTitle() {
-  return `<p>Red Rising</p>`;
+function renderTitle(j) {
+  return `<p>${books.name(j)}</p>`;
 }
 //function render img template
 function renderImg() {
