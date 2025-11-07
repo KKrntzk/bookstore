@@ -26,10 +26,12 @@ footer {
 }
 
 main {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(172, 172, 207);
 }
 
 .seperator {
