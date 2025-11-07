@@ -2,11 +2,12 @@
 
 //#endregion
 
+//#region FUNCTIONS
+
 // function render all
 function renderAll() {
   renderEachElement();
   renderEachTitle();
-  // renderLayout();
   // renderTitle();
   // renderImg();
   // renderBookSpecs();
@@ -14,6 +15,7 @@ function renderAll() {
   // renderComments();
 }
 
+//#region single render functions
 function renderEachElement() {
   let mainContainerRef = document.getElementById("mainContainer");
   for (let j = 0; j < books.length; j++) {
@@ -35,7 +37,17 @@ function renderEachTitle() {
   }
 }
 
-// const myObj = Object.keys(books);
+function renderEachImg() {}
+
+function renderEachHeaderBooksSpecs() {}
+
+function renderEachBookSpecs() {}
+
+function renderEachBooksComments() {}
+
+//#endregion
+
+//#region like function
 
 // function onclick change like amount add class disable greyscale
 function likesUpdate() {
@@ -50,3 +62,5 @@ function disableGreyscale() {
   let heartBtnRef = document.getElementById("favBtn");
   heartBtnRef.classList.remove("heart-btn-greyscale");
 }
+//#endregion
+//#endregion
