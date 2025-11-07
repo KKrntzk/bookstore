@@ -10,7 +10,7 @@ function renderAll() {
   renderEachElement();
   pushObjectToArray();
   console.log(ourArray);
-  renderEachTitle();
+  // renderEachTitle();
   // renderLayout();
   // renderTitle();
   // renderImg();

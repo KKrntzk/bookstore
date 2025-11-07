@@ -1,40 +1,40 @@
 //function render Layout
 function renderLayout(j) {
   return `<section class="book-section-container" id="firstBookSection(${j})">
-        <header class="header-single-book" id="singleBookHeader">
-          <div id="bookTitle">           
+        <header class="header-single-book" id="singleBookHeader(${j})">
+          <div id="bookTitle(${j})">           
           </div>
 
         </header>
         <div class="seperator"></div>
-        <section id="bookImg">    
+        <section id="bookImg(${j})">    
         </section>
         <div class="seperator"></div>
-        <section id="bookSpecs">
-          <header class="header-book-specs" id="bookSpecsHeader">          
+        <section id="bookSpecs(${j})">
+          <header class="header-book-specs" id="bookSpecsHeader(${j})">          
           </header>
 
-          <table id="tableSpecs">     
+          <table id="tableSpecs(${j})">     
           </table>
         </section>
         <div class="seperator"></div>
-        <section class="comment-section-container" id="commentsSection">
+        <section class="comment-section-container" id="commentsSection(${j})">
           <header class="header-comments" id="commentsHeader">
             <p>Kommentare</p>
           </header>
 
-          <div class="comment-table-container" id="commentsTable">
+          <div class="comment-table-container" id="commentsTable(${j})">
             <table>
               <tr>
-                <td id="tdCommentUserName">                 
+                <td id="tdCommentUserName(${j})">                 
                 </td>
-                <td id="tdUserComment">                
+                <td id="tdUserComment(${j})">                
                 </td>
               </tr>
             </table>
             <div class="input-container">
-              <input class="input-comment" id="commentInput" type="text" />
-              <button class="submit-send-btn" id="submitCommitBtn">
+              <input class="input-comment" id="commentInput(${j})" type="text" />
+              <button class="submit-send-btn" id="submitCommitBtn(${j})">
                 <img
                   class="submit-send-btn-img"
                   src="./img/send.png"
