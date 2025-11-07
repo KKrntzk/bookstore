@@ -1,6 +1,6 @@
 //function render Layout
 function renderLayout() {
-  let mainLayoutRef = document.getElementById("main-container");
+  let mainLayoutRef = document.getElementById("mainContainer");
   mainLayoutRef.innerHTML = `<section class="book-section-container" id="firstBookSection">
         <header class="header-single-book" id="singleBookHeader">
           <div id="bookTitle">           

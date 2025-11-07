@@ -6,17 +6,27 @@ let ourArray = [];
 
 // function render all
 function renderAll() {
-  renderLayout();
-  renderTitle();
-  renderImg();
-  renderBookSpecs();
-  renderHeaderBookSpecs();
-  renderComments();
+  renderEachElement();
+  // renderLayout();
+  // renderTitle();
+  // renderImg();
+  // renderBookSpecs();
+  // renderHeaderBookSpecs();
+  // renderComments();
 }
 
-for (let i = 0; i < objKeys.length; i++) {
-  const element = objKeys[i];
-  ourArray.push(books[objKeys[i]]);
+// function getTitles() {
+//   for (let i = 0; i < objKeys.length; i++) {
+//     const element = objKeys[i];
+//     ourArray.push(books[objKeys[i]]);
+//   }
+// }
+
+function renderEachElement() {
+  let mainContainerRef = document.getElementById("mainContainer");
+  for (let j = 0; j < objKeys.length; j++) {
+    mainContainerRef += renderLayout(j);
+  }
 }
 
 // const myObj = Object.keys(books);
