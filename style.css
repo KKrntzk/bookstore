@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(221, 221, 252);
+  background-color: #5b4d3c;
   gap: 20px;
 }
 
@@ -42,7 +42,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(221, 221, 252);
+  background-color: #5b4d3c;
   gap: 20px;
 }
 
@@ -53,12 +53,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(172, 172, 207);
+
+  background-color: #4e4533ec;
 }
 
 .seperator {
-  background-color: #6d7ece6b;
-  box-shadow: 1px 1px 1px 1px rgba(173, 216, 230, 0.541);
+  background-color: #1712199b;
+  box-shadow: 1px 1px 1px 1px #17121964;
   width: 400px;
   height: 2px;
   margin-top: 10px;
@@ -70,8 +71,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(132, 132, 209);
-  box-shadow: 1px 1px 1px 1px rgba(13, 15, 15, 0.541);
+  background-color: #5a4f46cb;
+  box-shadow: 1px 1px 1px 1px #171219ad;
   border-radius: 20px;
   padding: 10px;
 }
@@ -146,7 +147,7 @@ main {
 
 .submit-send-btn {
   cursor: pointer;
-  background-color: rgb(120, 126, 156);
+  background-color: rgb(123, 120, 113);
   border: none;
   border-radius: 5px;
   padding: 2px;

@@ -1,7 +1,6 @@
 //function render Layout
-function renderLayout() {
-  let mainLayoutRef = document.getElementById("mainContainer");
-  mainLayoutRef.innerHTML = `<section class="book-section-container" id="firstBookSection">
+function renderLayout(j) {
+  return `<section class="book-section-container" id="firstBookSection(${j})">
         <header class="header-single-book" id="singleBookHeader">
           <div id="bookTitle">           
           </div>
@@ -49,8 +48,7 @@ function renderLayout() {
 }
 // function render title template
 function renderTitle() {
-  let titleRef = document.getElementById("bookTitle");
-  titleRef.innerHTML = `<p>Red Rising</p>`;
+  return `<p>Red Rising</p>`;
 }
 //function render img template
 function renderImg() {

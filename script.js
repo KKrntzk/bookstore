@@ -1,6 +1,7 @@
 //#region VARIABLEs
 
 let objKeys = Object.keys(books);
+// let objKeysTitles = Object.keys(books.name);
 let ourArray = [];
 //#endregion
 
@@ -16,17 +17,23 @@ function renderAll() {
 }
 
 // function getTitles() {
-//   for (let i = 0; i < objKeys.length; i++) {
-//     const element = objKeys[i];
-//     ourArray.push(books[objKeys[i]]);
-//   }
+
 // }
 
 function renderEachElement() {
   let mainContainerRef = document.getElementById("mainContainer");
   for (let j = 0; j < objKeys.length; j++) {
-    mainContainerRef += renderLayout(j);
+    mainContainerRef.innerHTML += renderLayout(j);
   }
+  // for (let i = 0; i < objKeys.length; i++) {
+  //   const books = objKeys[i];
+  //   ourArray.push(books[objKeys[i]]);
+  // }
+}
+
+function renderEachTitle() {
+  let titleRef = document.getElementById("bookTitle");
+  titleRef.innerHTML += renderTitle();
 }
 
 // const myObj = Object.keys(books);
