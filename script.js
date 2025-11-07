@@ -1,7 +1,3 @@
-//#region VARIABLEs
-
-//#endregion
-
 //#region FUNCTIONS
 
 //#region single render functions
@@ -13,7 +9,7 @@ function renderEachElement() {
     renderEachImg(j);
     renderEachHeaderBooksSpecs(j);
     renderEachBookSpecs(j);
-    // renderEachBooksComments(j);
+    renderEachBooksComments(j);
   }
 }
 
@@ -62,11 +58,11 @@ function renderEachBooksComments(j) {
       elementCommentUserName,
       elementComment
     );
+    elementCommentUserName.innerHTML = document.getElementById(
+      `commentatorUserName(${i})`
+    );
+    elementComment.innerHTML = document.getElementById(`userComment(${i})`);
   }
-  elementCommentUserName.innerHTML = document.getElementById(
-    `commentatorUserName(${i})`
-  );
-  elementComment.innerHTML = document.getElementById(`userComment(${i})`);
 }
 
 //#endregion
@@ -74,17 +70,17 @@ function renderEachBooksComments(j) {
 //#region like function
 
 // function onclick change like amount add class disable greyscale
-function likesUpdate() {
-  const likeRef = document.getElementById("favCounter");
-  likeRef.innerHTML = ` <p id="favCounter">
-                <p >${i + 1}Likes</p>
-            </p>`;
-  disableGreyscale();
-}
+// function likesUpdate() {
+//   const likeRef = document.getElementById("favCounter");
+//   likeRef.innerHTML = ` <p id="favCounter">
+//                 <p >${i + 1}Likes</p>
+//             </p>`;
+//   disableGreyscale();
+// }
 
-function disableGreyscale() {
-  let heartBtnRef = document.getElementById("favBtn");
-  heartBtnRef.classList.remove("heart-btn-greyscale");
-}
+// function disableGreyscale() {
+//   let heartBtnRef = document.getElementById("favBtn");
+//   heartBtnRef.classList.remove("heart-btn-greyscale");
+// }
 //#endregion
 //#endregion
