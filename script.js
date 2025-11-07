@@ -4,46 +4,57 @@
 
 //#region FUNCTIONS
 
-// function render all
-function renderAll() {
-  renderEachElement();
-  renderEachTitle();
-  // renderTitle();
-  // renderImg();
-  // renderBookSpecs();
-  // renderHeaderBookSpecs();
-  // renderComments();
-}
-
 //#region single render functions
 function renderEachElement() {
   let mainContainerRef = document.getElementById("mainContainer");
   for (let j = 0; j < books.length; j++) {
     mainContainerRef.innerHTML += renderLayout(j);
+    renderEachTitle(j);
+    renderEachImg(j);
+    renderEachHeaderBooksSpecs(j);
+    renderEachBookSpecs(j);
   }
 }
 
-function renderEachTitle() {
-  let bookTitlesRef = document.getElementById("bookTitle(${j})");
-  for (let i = 0; i < books.length; i++) {
-    const element = books[i];
-    bookTitlesRef.innerHTML += renderTitle(element.name);
-
-    // for (let k = 0; k < ourArray.length; k++) {
-    //   let titleRef = document.getElementById("bookTitle(0)");
-    //   const element = ourArray[k];
-    //   titleRef.innerHTML += renderTitle(element, k);
-    // }
-  }
+function renderEachTitle(j) {
+  const bookTitlesRef = document.getElementById(`bookTitle(${j})`);
+  const element = books[j].name;
+  bookTitlesRef.innerHTML += renderTitle(element);
 }
 
-function renderEachImg() {}
+function renderEachImg(j) {
+  const bookImgRef = document.getElementById(`bookImg(${j})`);
+  bookImgRef.innerHTML += renderImg(j);
+}
 
-function renderEachHeaderBooksSpecs() {}
+function renderEachHeaderBooksSpecs(j) {
+  const HeaderBookSpecsRef = document.getElementById(`bookSpecsHeader(${j})`);
+  const elementPrice = books[j].price;
+  const elementLikesAmount = books[j].likes;
+  HeaderBookSpecsRef.innerHTML += renderHeaderBookSpecs(
+    elementPrice,
+    elementLikesAmount
+  );
+}
 
-function renderEachBookSpecs() {}
+function renderEachBookSpecs(j) {
+  const bookSpecsRef = document.getElementById(`tableSpecs(${j})`);
+  const elementAuthorName = books[j].author;
+  const elementYear = books[j].publishedYear;
+  const elementGenre = books[j].genre;
+  bookSpecsRef.innerHTML += renderBookSpecs(
+    elementAuthorName,
+    elementYear,
+    elementGenre,
+    j
+  );
+}
 
-function renderEachBooksComments() {}
+function renderEachBooksComments(j) {
+  const commentsRef = document.getElementById(`commentsSection(${j})`);
+  const element = books[j].name;
+  bookTitlesRef.innerHTML += renderTitle(element);
+}
 
 //#endregion
 

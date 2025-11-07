@@ -48,42 +48,39 @@ function renderLayout(j) {
 }
 // function render title template
 function renderTitle(element) {
-  return `<p>${element.name}</p>`;
+  return `<p>${element}</p>`;
 }
 //function render img template
-function renderImg() {
-  let imgRef = document.getElementById("bookImg");
-  imgRef.innerHTML = `<img class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">`;
+function renderImg(j) {
+  return `<img id="genericImg(${j})" class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">`;
 }
 //function render book Specs
-function renderBookSpecs() {
-  let bookSpecsRef = document.getElementById("tableSpecs");
-  bookSpecsRef.innerHTML = `  <tr>
+function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
+  return `  <tr>
               <td>Autor</td>
               <td id="tdAuthor">
-                <p id="authorName">Author</p>
+                <p id="authorName(${j})">${elementAuthorName}</p>
               </td>
             </tr>
             <tr>
               <td>Erscheinungsjahr</td>
               <td id="tdpublishingYear">
-                <p id="pusblishingYear">2015</p>
+                <p id="pusblishingYear(${j})">${elementYear}</p>
               </td>
             </tr>
             <tr>
-              <td id="genre">Genre</td>
-              <td>Sci-Fi</td>
+              <td>Genre</td>
+              <td id="genre"(${j})>${elementGenre}</td>
             </tr>`;
 }
 //function render header sub template
-function renderHeaderBookSpecs() {
-  let BookSpecsHeaderRef = document.getElementById("bookSpecsHeader");
-  BookSpecsHeaderRef.innerHTML = `<div id="bookPrice">
-            <p>19,99</p>
+function renderHeaderBookSpecs(elementPrice, elementLikesAmount) {
+  return `<div id="bookPrice">
+            <p>${elementPrice} €</p>
             </div>
             <div class="favourite-sub-container" id="favouriteSubSection">             
              <p id="favCounter">
-                 <p >Likes</p> 
+                 <p>${elementLikesAmount} Likes</p> 
             </p>             
               <button class="fav-heart-btn" id="favBtn"><img class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
             </div>`;
