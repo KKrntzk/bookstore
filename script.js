@@ -40,7 +40,7 @@ function renderEachHeaderBooksSpecs(j) {
 function renderEachLikeAmount(j) {
   const likeAmountRef = document.getElementById(`favCounter(${j})`);
   const elementLikesAmount = books[j].likes;
-  likeAmountRef.innerHTML += renderLikeAmount(elementLikesAmount, j);
+  likeAmountRef.innerHTML = renderLikeAmount(elementLikesAmount, j);
 }
 
 function renderEachBookSpecs(j) {
