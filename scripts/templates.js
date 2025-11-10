@@ -92,5 +92,6 @@ function renderComments(j, i, elementCommentUserName, elementComment) {
                     ${elementComment}
                   </p>               
                 </td>
-              </tr>`;
+              </tr>
+              `;
 }

@@ -82,6 +82,12 @@ function checkForLike(j) {
 function likeOnclick(j) {
   const likeRef = document.getElementById(`likeIcon(${j})`);
   likeRef.classList.toggle("heart-btn-greyscale");
+  changeLikesAmount(j);
+}
+
+function changeLikesAmount(j) {
+  let elementLikesAmount = books[j].likes;
+  elementLikesAmount.innerHTML = books[j].likes + 1;
 }
 
 //#endregion
