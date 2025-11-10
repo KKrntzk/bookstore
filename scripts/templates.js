@@ -1,6 +1,7 @@
 //function render Layout
 function renderLayout(j) {
   return `
+    
         <section class="book-section-container" id="firstBookSection(${j})">
           <header class="header-single-book" id="singleBookHeader(${j})">
            <div id="bookTitle(${j})"> </div>
@@ -21,7 +22,7 @@ function renderLayout(j) {
 
          <section class="comment-section-container" id="commentsSection(${j})">
           <header class="header-comments" id="commentsHeader">
-            <p>Kommentare</p>
+             <h3>Kommentare</h3>
           </header>
           <div class="comment-table-container">
             <table id="commentsTable(${j})">
@@ -43,7 +44,7 @@ function renderLayout(j) {
 }
 // function render title template
 function renderTitle(element) {
-  return `<p>${element}</p>`;
+  return `<h2>${element}</h2>`;
 }
 //function render img template
 function renderImg(j) {

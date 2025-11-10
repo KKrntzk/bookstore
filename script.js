@@ -70,17 +70,17 @@ function renderEachBooksComments(j) {
 //#region like function
 
 // function onclick change like amount add class disable greyscale
-// function likesUpdate() {
-//   const likeRef = document.getElementById("favCounter");
-//   likeRef.innerHTML = ` <p id="favCounter">
-//                 <p >${i + 1}Likes</p>
-//             </p>`;
-//   disableGreyscale();
-// }
+function likesUpdate() {
+  const likeRef = document.getElementById("favCounter");
+  likeRef.innerHTML = ` <p id="favCounter">
+                <p >${i + 1}Likes</p>
+            </p>`;
+  disableGreyscale();
+}
 
-// function disableGreyscale() {
-//   let heartBtnRef = document.getElementById("favBtn");
-//   heartBtnRef.classList.remove("heart-btn-greyscale");
-// }
+function disableGreyscale() {
+  let heartBtnRef = document.getElementById("favBtn");
+  heartBtnRef.classList.remove("heart-btn-greyscale");
+}
 //#endregion
 //#endregion
