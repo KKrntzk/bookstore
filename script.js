@@ -9,6 +9,7 @@ function renderEachElement() {
     renderEachImg(j);
     renderEachHeaderBooksSpecs(j);
     renderEachBookSpecs(j);
+    renderEachLikeAmount(j);
     renderEachBooksComments(j);
     checkForLike(j);
   }
@@ -34,6 +35,12 @@ function renderEachHeaderBooksSpecs(j) {
     elementLikesAmount,
     j
   );
+}
+
+function renderEachLikeAmount(j) {
+  const likeAmountRef = document.getElementById(`favCounter(${j})`);
+  const elementLikesAmount = books[j].likes;
+  likeAmountRef.innerHTML += renderLikeAmount(elementLikesAmount, j);
 }
 
 function renderEachBookSpecs(j) {
@@ -82,12 +89,14 @@ function checkForLike(j) {
 function likeOnclick(j) {
   const likeRef = document.getElementById(`likeIcon(${j})`);
   likeRef.classList.toggle("heart-btn-greyscale");
+  const actualLikeAmountRef = document.getElementById(`actualLikeAmount(${j})`);
+  actualLikeAmountRef.innerHTML = "";
   changeLikesAmount(j);
+  renderEachLikeAmount(j);
 }
 
 function changeLikesAmount(j) {
-  let elementLikesAmount = books[j].likes;
-  elementLikesAmount.innerHTML = books[j].likes + 1;
+  books[j].likes++;
 }
 
 //#endregion

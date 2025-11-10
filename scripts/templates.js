@@ -75,11 +75,15 @@ function renderHeaderBookSpecs(elementPrice, elementLikesAmount, j) {
             <p>${elementPrice} €</p>
             </div>
             <div class="favourite-sub-container" id="favouriteSubSection">             
-             <p id="favCounter">
-                 <p>${elementLikesAmount} Likes</p> 
+             <p id="favCounter(${j})">
+                
             </p>             
               <button onclick="likeOnclick(${j})" class="fav-heart-btn" id="favBtn(${j})"><img id="likeIcon(${j})" class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
             </div>`;
+}
+
+function renderLikeAmount(elementLikesAmount, j) {
+  return ` <p id="actualLikeAmount(${j})">${elementLikesAmount} Likes</p> `;
 }
 //function comments template
 function renderComments(j, i, elementCommentUserName, elementComment) {
