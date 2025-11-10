@@ -96,7 +96,13 @@ function likeOnclick(j) {
 }
 
 function changeLikesAmount(j) {
-  books[j].likes++;
+  const likeRef = document.getElementById(`likeIcon(${j})`);
+  if (likeRef.classList.contains("heart-btn-greyscale")) {
+    books[j].likes--;
+  }
+  if (!likeRef.classList.contains("heart-btn-greyscale")) {
+    books[j].likes++;
+  }
 }
 
 //#endregion
