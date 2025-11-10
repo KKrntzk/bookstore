@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #493e30;
+  background-color: #236892;
   gap: 20px;
 }
 
@@ -42,7 +42,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #493e30;
+  background-color: #236892;
   gap: 20px;
 }
 
@@ -53,7 +53,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #524d42ec;
+  background-color: #2f3e47;
 }
 
 .main-container {
@@ -83,8 +83,8 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5a4f46cb;
-  box-shadow: 1px 1px 1px 1px #171219ad;
+  background-color: #5a9cd54b;
+  box-shadow: 1px 1px 1px 1px #5a9cd5;
   border-radius: 20px;
   padding: 10px;
   margin: 20px;

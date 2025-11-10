@@ -48,7 +48,7 @@ function renderTitle(element) {
 }
 //function render img template
 function renderImg(j) {
-  return `<img id="genericImg(${j})" class="book-img" src="./img/book-161117_1280.png" alt="Picture of a generic book">`;
+  return `<img id="genericImg(${j})" class="book-img" src="./img/books-7448036_1280.png" alt="Picture of a generic book">`;
 }
 //function render book Specs
 function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
