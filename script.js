@@ -10,6 +10,7 @@ function renderEachElement() {
     renderEachHeaderBooksSpecs(j);
     renderEachBookSpecs(j);
     renderEachBooksComments(j);
+    checkForLike(j);
   }
 }
 
@@ -30,7 +31,8 @@ function renderEachHeaderBooksSpecs(j) {
   const elementLikesAmount = books[j].likes;
   HeaderBookSpecsRef.innerHTML += renderHeaderBookSpecs(
     elementPrice,
-    elementLikesAmount
+    elementLikesAmount,
+    j
   );
 }
 
@@ -70,17 +72,12 @@ function renderEachBooksComments(j) {
 //#region like function
 
 // function onclick change like amount add class disable greyscale
-function likesUpdate() {
-  const likeRef = document.getElementById("favCounter");
-  likeRef.innerHTML = ` <p id="favCounter">
-                <p >${i + 1}Likes</p>
-            </p>`;
-  disableGreyscale();
+function checkForLike(j) {
+  const likeRef = document.getElementById(`likeIcon(${j})`);
+  if (books[j].liked == true) {
+    likeRef.classList.remove("heart-btn-greyscale");
+  }
 }
 
-function disableGreyscale() {
-  let heartBtnRef = document.getElementById("favBtn");
-  heartBtnRef.classList.remove("heart-btn-greyscale");
-}
 //#endregion
 //#endregion
