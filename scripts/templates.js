@@ -53,26 +53,27 @@ function renderImg(j) {
 //function render book Specs
 function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
   return `  <tr>
-              <td>Autor</td>
+               <td><strong>Autor:</strong></td>
               <td id="tdAuthor">
                 <p id="authorName(${j})">${elementAuthorName}</p>
               </td>
             </tr>
             <tr>
-              <td>Erscheinungsjahr</td>
+              <td><strong>Erscheinungsjahr:</strong></td>
+
               <td id="tdpublishingYear">
                 <p id="pusblishingYear(${j})">${elementYear}</p>
               </td>
             </tr>
             <tr>
-              <td>Genre</td>
+              <td><strong>Genre:</strong></td>
               <td id="genre"(${j})>${elementGenre}</td>
             </tr>`;
 }
 //function render header sub template
 function renderHeaderBookSpecs(elementPrice, elementLikesAmount, j) {
   return `<div id="bookPrice">
-            <p>${elementPrice} €</p>
+            <p><strong>${elementPrice} €</strong></p>
             </div>
             <div class="favourite-sub-container" id="favouriteSubSection">             
              <p id="favCounter(${j})">
@@ -89,12 +90,10 @@ function renderLikeAmount(elementLikesAmount, j) {
 function renderComments(j, i, elementCommentUserName, elementComment) {
   return `     <tr>
                 <td id="tdCommentUserName(${j})">
-                  <p id="commentatorUserName(${i})">${elementCommentUserName}</p>               
+                  <p id="commentatorUserName(${i})"><u>${elementCommentUserName}: </u><br><br></p>               
                 </td>
                 <td id="tdUserComment(${j})">
-                  <p id="userComment(${i})">
-                    ${elementComment}
-                  </p>               
+                <p id="userComment(${i})"><em>"${elementComment}"</em><br><br></p>               
                 </td>
               </tr>
               `;
