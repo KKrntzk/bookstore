@@ -78,7 +78,7 @@ function renderHeaderBookSpecs(elementPrice, elementLikesAmount, j) {
              <p id="favCounter">
                  <p>${elementLikesAmount} Likes</p> 
             </p>             
-              <button class="fav-heart-btn" id="favBtn"><img id="likeIcon(${j})" class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
+              <button onclick="likeOnclick(${j})" class="fav-heart-btn" id="favBtn(${j})"><img id="likeIcon(${j})" class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
             </div>`;
 }
 //function comments template

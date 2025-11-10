@@ -79,5 +79,10 @@ function checkForLike(j) {
   }
 }
 
+function likeOnclick(j) {
+  const likeRef = document.getElementById(`likeIcon(${j})`);
+  likeRef.classList.toggle("heart-btn-greyscale");
+}
+
 //#endregion
 //#endregion
