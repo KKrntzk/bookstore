@@ -53,7 +53,7 @@ function renderImg(j) {
 //function render book Specs
 function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
   return `  <tr>
-               <td><strong>Autor:</strong></td>
+              <td><strong>Autor:</strong></td>
               <td id="tdAuthor">
                 <p id="authorName(${j})">${elementAuthorName}</p>
               </td>
@@ -91,7 +91,7 @@ function renderComments(j, i, elementCommentUserName, elementComment) {
                   <p id="commentatorUserName(${i})"><u>${elementCommentUserName}: </u><br><br></p>               
                 </td>
                 <td id="tdUserComment(${j})">
-                <p id="userComment(${i})"><em>"${elementComment}"</em><br><br></p>               
+                  <p id="userComment(${i})"><em>"${elementComment}"</em><br><br></p>               
                 </td>
               </tr>
               `;
