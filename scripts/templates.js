@@ -30,7 +30,7 @@ function renderLayout(j) {
             </table>
             <div class="input-container">
               <input class="input-comment" id="commentInput(${j})" type="text" />
-               <button class="submit-send-btn" id="submitCommitBtn(${j})">
+               <button onclick="addComment(${j})" class="submit-send-btn" id="submitCommitBtn(${j})">
                  <img
                    class="submit-send-btn-img"
                    src="./img/send.png"
@@ -60,7 +60,6 @@ function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
             </tr>
             <tr>
               <td><strong>Erscheinungsjahr:</strong></td>
-
               <td id="tdpublishingYear">
                 <p id="pusblishingYear(${j})">${elementYear}</p>
               </td>
@@ -71,16 +70,15 @@ function renderBookSpecs(elementAuthorName, elementYear, elementGenre, j) {
             </tr>`;
 }
 //function render header sub template
-function renderHeaderBookSpecs(elementPrice, elementLikesAmount, j) {
+function renderHeaderBookSpecs(elementPrice, j) {
   return `<div id="bookPrice">
             <p><strong>${elementPrice} €</strong></p>
-            </div>
-            <div class="favourite-sub-container" id="favouriteSubSection">             
-             <p id="favCounter(${j})">
-                
-            </p>             
-              <button onclick="likeOnclick(${j})" class="fav-heart-btn" id="favBtn(${j})"><img id="likeIcon(${j})" class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""></button>
-            </div>`;
+          </div>
+
+          <div class="favourite-sub-container" id="favouriteSubSection">             
+            <p id="favCounter(${j})"> </p>             
+            <button onclick="likeOnclick(${j})" class="fav-heart-btn" id="favBtn(${j})"><img id="likeIcon(${j})" class="fav-heart-btn-img heart-btn-greyscale" src="./img/heart-2034908_1280.png" alt=""> </button>
+          </div>`;
 }
 
 function renderLikeAmount(elementLikesAmount, j) {

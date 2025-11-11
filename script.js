@@ -29,10 +29,8 @@ function renderEachImg(j) {
 function renderEachHeaderBooksSpecs(j) {
   const HeaderBookSpecsRef = document.getElementById(`bookSpecsHeader(${j})`);
   const elementPrice = books[j].price;
-  const elementLikesAmount = books[j].likes;
   HeaderBookSpecsRef.innerHTML += renderHeaderBookSpecs(
-    elementPrice,
-    elementLikesAmount,
+    elementPrice.toFixed(2),
     j
   );
 }
@@ -58,6 +56,7 @@ function renderEachBookSpecs(j) {
 
 function renderEachBooksComments(j) {
   const commentsTableRef = document.getElementById(`commentsTable(${j})`);
+  commentsTableRef.innerHTML = "";
   for (let i = 0; i < books[j].comments.length; i++) {
     const elementCommentUserName = books[j].comments[i].name;
     const elementComment = books[j].comments[i].comment;
@@ -73,12 +72,10 @@ function renderEachBooksComments(j) {
     elementComment.innerHTML = document.getElementById(`userComment(${i})`);
   }
 }
-
 //#endregion
 
 //#region like function
 
-// function onclick change like amount add class disable greyscale
 function checkForLike(j) {
   const likeRef = document.getElementById(`likeIcon(${j})`);
   if (books[j].liked == true) {
@@ -104,6 +101,18 @@ function changeLikesAmount(j) {
     books[j].likes++;
   }
 }
-
 //#endregion
+
+//#region commentsection
+
+function addComment(j) {
+  const inputRef = document.getElementById(`commentInput(${j})`);
+  if (inputRef.value.length != 0) {
+    books[j].comments.push({ name: "Herbert", comment: inputRef.value });
+    renderEachBooksComments(j);
+  }
+  inputRef.value = "";
+}
+//#endregion
+
 //#endregion
