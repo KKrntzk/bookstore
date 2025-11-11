@@ -4,23 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-display: swap;
-  font-family: "UnifrakturMaguntia";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/unifrakturmaguntia-v22-latin-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Goudy Bookletter 1911";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/goudy-bookletter-1911-v21-latin-regular.woff2")
-    format("woff2");
-}
-
 .logo-img {
   height: 50px;
   width: 50px;
@@ -171,42 +154,4 @@ h3 {
   height: 15px;
   width: 15px;
   padding-top: 4px;
-}
-
-@media (max-width: 500px) {
-  .seperator {
-    width: 200px;
-  }
-
-  .header-single-book {
-    height: 20px;
-    width: 200px;
-    text-align: center;
-    font-size: 12px;
-  }
-
-  .book-img {
-    height: 40px;
-    width: 40px;
-  }
-
-  .header-book-specs {
-    width: 200px;
-  }
-
-  .comment-section-container {
-    width: 200px;
-  }
-
-  .header-comments {
-    width: 200px;
-  }
-
-  .comment-table-container {
-    width: 200px;
-  }
-
-  .input-container {
-    width: 200px;
-  }
 }

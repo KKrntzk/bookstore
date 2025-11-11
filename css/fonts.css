@@ -3,7 +3,8 @@
   font-family: "UnifrakturMaguntia";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/unifrakturmaguntia-v22-latin-regular.woff2") format("woff2");
+  src: url("../fonts/unifrakturmaguntia-v22-latin-regular.woff2")
+    format("woff2");
 }
 
 @font-face {
@@ -11,6 +12,6 @@
   font-family: "Goudy Bookletter 1911";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/goudy-bookletter-1911-v21-latin-regular.woff2")
+  src: url("../fonts/goudy-bookletter-1911-v21-latin-regular.woff2")
     format("woff2");
 }
